@@ -1,0 +1,1177 @@
+<!Doctype HTML>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, maximum-scale=1">
+      <title>Twitter Trends</title>
+      <link rel="icon" href="twitter.png" type="image/png">
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+      <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="css/animate.css" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <header id="header">
+         <div id="head" class="parallax" parallax-speed="2" style="background-position: center;height:500px;">
+         </div>
+      </header>
+      <header id="header_wrapper">
+         <div class="container">
+            <div class="header_box">
+               <nav class="navbar navbar-inverse" role="navigation">
+                  <div class="navbar-header">
+                     <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                  </div>
+                  <div id="main-nav" class="collapse navbar-collapse navStyle">
+                     <ul class="nav navbar-nav" id="mainNav">
+                        <li class="active"><a href="#header" class="scroll-link">Twitter Trends</a></li>
+                        <li><a href="#aboutUs" class="scroll-link">Twitter Statistics</a></li>
+                        <li><a href="#service" class="scroll-link">Worldwide Trends</a></li>
+                        <li><a href="#contact" class="scroll-link">Contact</a></li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <section id="aboutUs">
+         <div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
+            <div class="container">
+               <h2>Twitter Statistics</h2>
+               <h6>Twitter is a social network that sees 100 million users login daily.</h6>
+               <div class="inner_section">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <h3>Facts</h3>
+                        <p>Twitter is an online social networking service that enables users to send short 140-character messages called tweets. According to recent social media industry figures, Twitter currently ranks as one of the leading social networks worldwide based on active users. As of the fourth quarter of 2015, Twitter had 305 million monthly active users. Registered users can read and post tweets as well as follow other users via update feed. As of January 2016, Katy Perry was the most-followed celebrity on Twitter with more than 80 million followers. </p>
+                     </div>
+                     <div class="col-md-6">
+                        <h3>Statistics</h3>
+                        <div class="progress" style="margin-top:3%;">
+                           <div class="progress-bar" role="progressbar" aria-valuenow="310" aria-valuemin="0" aria-valuemax="1000" style="width: 80%;">
+                              <span class="sr-only">310 million</span>
+                           </div>
+                           <span class="progress-type">Number of people that use Twitter</span>
+                           <span class="progress-completed">310 million</span>
+                        </div>
+                        <div class="progress">
+                           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="130" aria-valuemin="0" aria-valuemax="1000" style="width: 50%">
+                              <span class="sr-only">130 million</span>
+                           </div>
+                           <span class="progress-type">Unique monthly visitors </span>
+                           <span class="progress-completed">130 million</span>
+                        </div>
+                        <div class="progress">
+                           <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="1000" style="width: 45%">
+                              <span class="sr-only">100 million</span>
+                           </div>
+                           <span class="progress-type">Daily Active Twitter Users</span>
+                           <span class="progress-completed">100 million</span>
+                        </div>
+                        <div class="progress">
+                           <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                              <span class="sr-only">65 million</span>
+                           </div>
+                           <span class="progress-type">Twitter Users in the US</span>
+                           <span class="progress-completed">65 million</span>
+                        </div>
+                        </p>					 
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--Trends and Tweets-->
+      <section  id="service" style="background-color:#63B8FF;">
+         <div class="container" >
+            <div class="row">
+               <div class="col-md-9">
+                  <h2 id="wwide">Worldwide Trending Topics</h2>
+                  <h2 id="USwide" style="display:none">USA Trending Topics</h2>
+                  <h2 id="Pakwide" style="display:none">Pakistan Trending Topics</h2>
+                  <h6>A trend on Twitter refers to a hashtag-driven topic that is immediately popular at a particular time.</h6>
+               </div>
+               <div class="row">
+                  <div class="col-md-3 dropdown ">
+                     <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Select Location to view Trends
+                     <span class="caret"></span></button>
+                     <ul class="dropdown-menu" style="margin-left:20px;">
+                        <li><a data-value="1" style="cursor:pointer;">United States</a></li>
+                        <li><a data-value="2" style="cursor:pointer;">Pakistan</a></li>
+                     </ul>
+                  </div>
+                  <div id="ntrends" class="col-md-3 dropdown" style="display:none;">
+                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Top N Trends
+                     <span class="caret"></span></button>
+                     <ul class="dropdown-menu" style="margin-left:20px;">
+                        <li><a data-value="5" style="cursor:pointer;">3</a></li>
+                        <li><a data-value="6" style="cursor:pointer;">6</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="service_wrapper" id="wwide1">
+               <div class="row">
+                  <a data-toggle="modal" href="#myModal1">
+                     <div class="col-md-4">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-dot-circle-o"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#NationalDonutDay</h3>
+                           <p class="animated fadeInDown wow">One for all and all for donuts! @DonutDayUSA <br>Click to view Tweets</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal2">
+                     <div class="col-md-4">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#NiUnaMenos</h3>
+                           <p class="animated fadeInDown wow">A protest against femicides in the country @NiUnaMenos_<br> Click to view Tweets</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal3">
+                     <div class="col-md-4">
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-smile-o "></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#Justmoji</h3>
+                           <p class="animated fadeInDown wow">Justin Bieber official line of emojis @justinbieber <br> Click to view Tweets</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="service_wrapper" id="USwide1" style="display:none">
+               <div class="row">
+                  <a data-toggle="modal" href="#myModal4">
+                     <div class="col-md-4">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-dot-circle-o"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#CookACeleb</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal5">
+                     <div class="col-md-4">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#ILoveTaylorSwiftBecause</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal6">
+                     <div class="col-md-4">
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-smile-o "></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#FridayFeeling</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="service_wrapper" id="USwide2" style="display:none">
+               <div class="row">
+                  <a data-toggle="modal" href="#myModal13">
+                     <div class="col-md-4">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-dot-circle-o"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#GirlMeetsWorld</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal14">
+                     <div class="col-md-4">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#IfYoureMyWingmanYouBetter</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal15">
+                     <div class="col-md-4">
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-smile-o "></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#USAvCOL</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="service_wrapper" id="Pakwide1" style="display:none">
+               <div class="row">
+                  <a data-toggle="modal" href="#myModal7">
+                     <div class="col-md-4">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-dot-circle-o"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#HateThatMoment</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal8">
+                     <div class="col-md-4">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#OneScaryLine</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal9">
+                     <div class="col-md-4">
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-smile-o "></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#HBDWasimAkram</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="service_wrapper" id="Pakwide2" style="display:none">
+               <div class="row">
+                  <a data-toggle="modal" href="#myModal10">
+                     <div class="col-md-4">
+                        <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-dot-circle-o"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#MuhammadAli</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal11">
+                     <div class="col-md-4">
+                        <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#budget16</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a data-toggle="modal" href="#myModal12">
+                     <div class="col-md-4">
+                        <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-smile-o "></i></span> </div>
+                        <div class="service_block">
+                           <h3 class="animated fadeInUp wow">#SayitwithPepsi</h3>
+                           <p class="animated fadeInDown wow">Click to view Tweets and <br> Read More</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <!-- Modal -->
+         <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#NationalDonutDay</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Nigel Zeff</h2>
+                                             <span>@nigelandrewzeff</span>
+                                             <p>I don't know about you but for me it's #NationalDonutDay every day tbh</p>
+                                             <a class="read-more" href="https://twitter.com/nigelandrewzeff">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">pony boy</h2>
+                                             <span>@internet_niche</span>
+                                             <p>happy #NationalDonutDay binches! @aadelenaa</p>
+                                             <a class="read-more" href="https://twitter.com/internet_niche">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <!-- Modal -->
+         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#NiUnaMenos</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">torabe marcemartinez</h2>
+                                             <span>@peladotorabe</span>
+                                             <p>"She dreams in colour, she dreams in red, can't find a better man..." </p>
+                                             <a class="read-more" href="https://twitter.com/peladotorabe">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Vishaan</h2>
+                                             <span>@Vishaan5</span>
+                                             <p>Real men don't abuse woman.</p>
+                                             <a class="read-more" href="https://twitter.com/Vishaan5">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <!-- Modal -->
+         <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#Justmoji</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Comedy Central</h2>
+                                             <span>@ComedyCentral</span>
+                                             <p>I.@justinbieber released a #Justmoji app, because nothing says, "Take me seriously! I'm an adult!" like a cute cartoon version of yourself.</p>
+                                             <a class="read-more" href="https://twitter.com/ComedyCentral">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Celeb Mix</h2>
+                                             <span>@CelebMix</span>
+                                             <p>So glad we can now express our daily emotions and actions using @justinbieber </p>
+                                             <a class="read-more" href="https://twitter.com/CelebMix">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#CookACeleb</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Catfish Billy Lin</h2>
+                                             <span>@ChaosTheoryZA</span>
+                                             <p>Bread Pitt & Angelina Jelly? No? Ok. ..lock the door behind me</p>
+                                             <a class="read-more" href="https://twitter.com/ChaosTheoryZA">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">blmayne</h2>
+                                             <span>@blmayne</span>
+                                             <p>David Lee Broth #CookACeleb</p>
+                                             <a class="read-more" href="https://twitter.com/blmayne">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#ILoveTaylorSwiftBecause</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>27 min </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Taylor Swift News</h2>
+                                             <span>@TSwiftNZ</span>
+                                             <p>#ILoveTaylorSwiftBecause she always gives back and has been named 'The Most Charitable Celebrirty' 4 years in a row </p>
+                                             <a class="read-more" href="https://twitter.com/TSwiftNZ">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">El Rincon de Taylor</h2>
+                                             <span>@rincondeTaylor</span>
+                                             <p>#ILoveTaylorSwiftBecause she has taught me to be fearless</p>
+                                             <a class="read-more" href="https://twitter.com/rincondeTaylor">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#FridayFeeling</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">WWE</h2>
+                                             <span>@WWE</span>
+                                             <p>#ItsFriday, and @shanemcmahon is definitely ready to party this weekend! #FridayFeeling #HereComesTheMoney</p>
+                                             <a class="read-more" href="https://twitter.com/WWE">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Ascot Racecourse Verified account </h2>
+                                             <span>@Ascot</span>
+                                             <p>Get into the #FridayFeeling with a glass of @BollingerUK. Just 11 days until #RoyalAscot</p>
+                                             <a class="read-more" href="https://twitter.com/Ascot">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#HateThatMoment</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Bazila Khan</h2>
+                                             <span>@bazo012</span>
+                                             <p>Jab Saturday ko bi off na mily</p>
+                                             <a class="read-more" href="https://twitter.com/bazo012">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Syed Junaid Ul Haq</h2>
+                                             <span>@SyedJunaidUlHaq</span>
+                                             <p>The Fact is We all have that moment when you really miss someone & you can't do anything.! </p>
+                                             <a class="read-more" href="https://twitter.com/SyedJunaidUlHaq">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#OneScaryLine</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Djinn</h2>
+                                             <span>@bllmhzn</span>
+                                             <p>You don't care like I do</p>
+                                             <a class="read-more" href="https://twitter.com/bllmhzn">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Zarah</h2>
+                                             <span>@rubinadogar</span>
+                                             <p>#OneScaryLine another sleepless night</p>
+                                             <a class="read-more" href="https://twitter.com/rubinadogar">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#HBDWasimAkram</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Sumaira Jamil</h2>
+                                             <span>@realsumera_</span>
+                                             <p>#HBDWasimAkram as sultan of swing and first Pak bowler who hs takn 500wkts in odi&test crickt celbrating 50birthday </p>
+                                             <a class="read-more" href="https://twitter.com/realsumera_">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Salman PTI (I.K).</h2>
+                                             <span>@itsSalmanPTI</span>
+                                             <p>Wasim Bhai You are Hero of Pakistan Cricket You Must Surve As PAKISTAN CRICKET Team coach</p>
+                                             <a class="read-more" href="https://twitter.com/itsSalmanPTI">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#MuhammadAli</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">abdul</h2>
+                                             <span>@Advil</span>
+                                             <p>Not just the greatest boxer of all time. The greatest trash talker EVER. RIP All</p>
+                                             <a class="read-more" href="https://twitter.com/Advil">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>3h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Stephan Mangan</h2>
+                                             <span>@StephanMangan</span>
+                                             <p>"Man, I ain't got no quarrel with the Vietcong". RIP #MuhammadAli</p>
+                                             <a class="read-more" href="https://twitter.com/StephenMangan">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#budget16</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Ahsan Nasir Raja</h2>
+                                             <span>@SNRaja_</span>
+                                             <p>#budget16 although I am not expecting much from PMLN Govt bt still this budget is going to be a nightmare for 70% (poor) people of Pakistan.</p>
+                                             <a class="read-more" href="https://twitter.com/SNRaja_">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Fawad</h2>
+                                             <span>@Fawadies</span>
+                                             <p>Rs. 860 billion for defense and Rs. 84 billion for education. As it indicate that Pakistan need no education</p>
+                                             <a class="read-more" href="https://twitter.com/Fawadies">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#SayitwithPepsi</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>4h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Champions</h2>
+                                             <span>@IamWaqarKhan</span>
+                                             <p>Pepsi like a national drink #SayitwithPepsi</p>
+                                             <a class="read-more" href="https://twitter.com/IamWaqarKhan">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>2h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Maha_Afsand</h2>
+                                             <span>@maha_afsand1</span>
+                                             <p>Hot hot weather and thandi thandi Pepsi </p>
+                                             <a class="read-more" href="https://twitter.com/maha_asfand1">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#GirlMeetsWorld</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>10 min </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">flowerboho</h2>
+                                             <span>@flower_boho</span>
+                                             <p>#GirlMeetsWorld I love Riley and Farkle. </p>
+                                             <a class="read-more" href="https://twitter.com/flower_boho">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>1h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Lyna</h2>
+                                             <span>@corymatthevs</span>
+                                             <p>the ratings for gm highschool are going to be so good i can feel it </p>
+                                             <a class="read-more" href="https://twitter.com/corymatthevs">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#IfYoureMyWingmanYouBetter</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>3h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Cindy</h2>
+                                             <span>@cinddy_m</span>
+                                             <p>#IfYoureMyWingmanYouBetter DON'T EVER LEAVE YOUR WINGMAN </p>
+                                             <a class="read-more" href="https://twitter.com/cinddy_m">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>4h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Sarachacha</h2>
+                                             <span>@Sarah_Joyous</span>
+                                             <p>#IfYoureMyWingmanYouBetter Suit up!</p>
+                                             <a class="read-more" href="https://twitter.com/Sarah_Joyous">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content" style="width:120%;">
+                  <div class="modal-header">
+                     <h4 class="modal-title">#USAvCOL</h4>
+                  </div>
+                  <div class="modal-body">
+                     <section>
+                        <div class="container">
+                           <section id="news" class="white-bg padding-top-bottom">
+                              <div class="container" style="margin-top:-6%">
+                                 <div class="timeline">
+                                    <div class="date-title">
+                                       <span>Top Tweets</span>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>5h </p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">Adam Rank</h2>
+                                             <span>@adamrank</span>
+                                             <p>Good news for the Panthers, you no longer have the most disappointing performance at Levi Stadium in the last six months.  </p>
+                                             <a class="read-more" href="https://twitter.com/adamrank">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-sm-6 news-item">
+                                          <div class="news-content">
+                                             <div class="date">
+                                                <p>6h</p>
+                                             </div>
+                                             <h2 class="news-title" style="color:black">ESPN FC</h2>
+                                             <span>@ESPNFC</span>
+                                             <p>Carlos Bacca goes one-on-one with Brad Guzan but hits the crossbar</p>
+                                             <a class="read-more" href="https://twitter.com/ESPNFC">Read More</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </section>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+               <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+         </div>
+         <!-- /.modal -->
+         <div class="row" id="pages" style="display:none;">
+            <div class="col-md-5"></div>
+            <div class="col-md-2" style="margin-left:5%;">
+               <nav>
+                  <ul class="pagination">
+                     <li>
+                     </li>
+                     <li id="aactive" class="active"><a data-value="3" style="cursor:pointer;">1</a></li>
+                     <li id="nactive"><a data-value="4" style="cursor:pointer;">2</a></li>
+                     <li>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="col-md-5"></div>
+         </div>
+      </section>
+      <footer class="footer_wrapper" id="contact">
+         <div class="container">
+            <section class="page_section contact" id="contact">
+               <div class="contact_section">
+                  <h2>Contact ME</h2>
+               </div>
+               <div class="row">
+                  <div class="col-lg-4"></div>
+                  <div class="col-lg-4 wow fadeInLeft" style="margin-left:3%">
+                     <div class="contact_info">
+                        <div class="detail">
+                           <h4>Hussnain Cheema</h4>
+                           <p>Bachelors of Computer Sciences - SEECS NUST - Project Red Buffer</p>
+                        </div>
+                        <div class="detail">
+                           <h4>Call Me</h4>
+                           <p>+92 313 8697373</p>
+                        </div>
+                        <div class="detail">
+                           <h4>Email Me</h4>
+                           <p>hussnain_93@hotmail.com</p>
+                        </div>
+                     </div>
+                     <ul class="social_links" style="margin-left:3%;">
+                        <li class="twitter animated bounceIn wow delay-02s"><a href="https://twitter.com/hussnain2A"><i class="fa fa-twitter"></i></a></li>
+                        <li class="facebook animated bounceIn wow delay-03s"><a href="https://www.facebook.com/hussnain.75"><i class="fa fa-facebook"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-4"></div>
+               </div>
+            </section>
+         </div>
+         <div class="container">
+            <div class="footer_bottom"><span>Copyright © reserved,   Designed by Hussnain Cheema</a>. </span> </div>
+         </div>
+      </footer>
+      <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+      <script type="text/javascript" src="js/jquery.nav.js"></script> 
+      <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+      <script type="text/javascript" src="js/jquery.isotope.js"></script>
+      <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+      <script type="text/javascript" src="js/wow.js"></script> 
+      <script type="text/javascript" src="js/custom.js"></script>
+   </body>
+</html>
